@@ -1,0 +1,48 @@
+/* This file is part of BBClone (A PHP based Web Counter on Steroids)
+ * 
+ * SVN FILE $Id: changelog.txt 246 2014-02-10 11:31:32Z joku $
+ *  
+ * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * See doc/copying.txt for details
+ */
+
+0.6.2
+-----
+* NEW: GeoIP PHP/Perl Module plugin added
+* Update: Corrected Top Origin for Global Stats
+* Update: Improved Top Hosts for Global Stats
+* Update: Languages where possible (now including template for new languages)
+* Update: Added new domains as there where some new additions.
+* Update: New detections for Browsers, OS and Robots. With thanks to all forum users who submitted updates.
+
+0.6.1
+-----
+* Change: Language code changed to utf-8
+* Update: GeoIP detection for IPv6 and IPv4
+* Update: Added new domains as there where some new additions.
+* Update: New detections for Browsers, OS and Robots. With thanks to all forum users who submitted updates.
+
+0.6.0
+-----
+* NEW: Moved extension/country look-up into plug-in mechanism.
+* NEW: Over-right feature for version detections (use text:<version>).
+* NEW: Now load-time can be displayed (configurable) on the bottom of each page.
+* NEW: Moved layout to CSS, meaning some configuration parts (like font sizes etc.) are now moved into CCS.
+* Change: Selected statistics page is now highlighted in navigation menu.
+* Change: The "who is" option, now configurable and from detailed view for IP numbers only.
+* Update: Upgrade from GPL version 2 to version 3 for better protection.
+* Update: Time-format is now translated and not system specific (especially within time-stats).
+* Update: Title bar is now more flexible, by default a fixed language specific text.
+* Update: New detections for Browsers, OS and Robots. With thanks to all forum users who submitted updates.
+* Update: Added new domains as there where some new additions (.asia .cat .pro .tel etc).

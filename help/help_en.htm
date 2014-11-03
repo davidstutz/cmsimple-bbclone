@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BBClone Plugin for CMSimple</title>
+		<meta name="robots" content="noindex, nofollow" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="copyright" content="David Stutz" />
+		 
+        <script type="text/javascript" src="js/shAutoloader.js"></script>
+		<script type="text/javascript" src="js/shCore.js"></script>
+		
+		<script type="text/javascript" src="js/shBrushPhp.js"></script>
+		<script type="text/javascript" src="js/shBrushCss.js"></script>
+        
+		<link href="css/shCore.css" rel="stylesheet" type="text/css" />
+		<link href="css/shCoreDefault.css" rel="stylesheet" type="text/css" />
+		
+		<style type="text/css">
+			/* Colors: #005fa8 #f94405 */
+			#content,
+			#navigation {
+				font-family: "Liberation Sans", Helvetica, Arial, sans-serif;
+				font-size: 12pt;
+				color: #444444;
+				float: left;
+			}
+			#navigation {
+				width: 16%;
+				padding-right: 1%;
+				margin-right: 1%;
+				border-right: 1px solid #DDDDDD;
+				font-size: 90%;
+			}
+			#content {
+				width: 80%;
+			}
+			#content a,
+			#navigation a {
+				text-decoration: none;
+				color: #005fa8;
+			}
+			#content a:hover,
+			#navigation a:hover {
+				color: #f94405;
+			}
+			#content img {
+				border:1px solid #777;
+				padding:10px;
+				margin:10px;
+			}
+			#content h1 a, 
+			#content h2 a, 
+			#content h3 a, 
+			#content h4 a{
+				color: #444444;
+			}
+			#content h1 a:hover, 
+			#content h2 a:hover, 
+			#content h3 a:hover, 
+			#content h4 a:hover{
+				color: #444444;
+			}
+			#content h1 {
+				font-size: 20pt;
+				border-bottom: 1px solid #DDDDDD;
+			}
+			#content h2 {
+				font-size: 18pt;
+				border-bottom: 1px solid #DDDDDD;
+			}
+			#content h3 {
+				font-size: 16pt;
+				border-bottom: 1px solid #DDDDDD;
+			}
+			#content h4 {
+				font-size: 14pt;
+				border-bottom: 1px solid #DDDDDD;
+			}
+			#content .toplink {
+				margin-right: 1em;
+				color: #005fa8;
+			}
+			#content ul {
+				list-style-type: square;
+			}
+			#navigation ol {
+				list-style-type: upper-roman;
+				margin-left: 0;
+				padding-left: 1.6em;
+			}
+			#navigation ol ol {
+				list-style-type: decimal;
+				margin-left: .2em;
+				padding-left: .6em;
+			}
+			#navigation ol ol ol {
+				list-style-type: lower-latin;
+				margin-left: .2em;
+				padding-left: .6em;
+			}
+			#navigation ol ol ol ol {
+				list-style-type: lower-roman;
+				margin-left: .1em;
+				padding-left: .6em;
+			}
+			#content .notice {
+				padding:.8em;
+				margin-bottom:1.6em;
+				border:2px solid #ddd;
+				background:#FFF6BF;
+				color:#514721;
+				border-color:#FFD324;
+			}
+			#content .code {
+				font-family:"Courier New", Courier, monospace;
+				background: #FAFAFA;
+				border: 1px dotted #777777;
+				padding: 10px;
+				margin: 1em;
+				text-align: left;
+				word-wrap: break-word;
+			}
+			#content .code {
+				list-style-type: none;
+			}
+			#content .toplink {
+				float: right;
+				font-weight: normal;
+				font-size: 12pt;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div id="navigation">
+			<ol>
+				<li><a href="#introduction">Introduction</a></li>
+				<li><a href="#version">Version</a></li>
+				<li>
+					<a href="#requirements">Requirements</a>
+					<ol>
+						<li><a href="#requirements-cmsimple">Supported CMSimple versions</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#installation">Installation</a>
+					<ol>
+						<li><a href="#installation-xh">CMSimple XH</a></li>
+						<li><a href="#installation-other">CMSimple 3.3 and CMSimple LE</a></li>
+					</ol>
+				</li>
+				<li>
+					<a href="#configuration">Configuration</a>
+					<ol>
+						<li><a href="#configuration-options">Configuration options</a></li>
+						<li><a href="#configuration-file">The configuration file</a></li>
+						<li><a href="#configuration-bbclone">BBClone configuration</a></li>
+					</ol>
+				</li>
+				<li><a href="#usage">Usage</a></li>
+				<li><a href="#changelog">Changelog</a></li>
+				<li>
+                    <a href="#license">License</a>
+                    <ol>
+						<li><a href="#license-plugin">Plugin's license</a></li>
+						<li><a href="#license-bbclone">Configuration options</a></li>
+                    </ol>
+                </li>
+			</ol>
+		</div>
+		
+		<div id="content">
+			<h1>BBClone Plugin for CMSimple</h1>
+						
+				<h2><a name="introduction">Introduction</a><a class="toplink" href="#">Back to top</a></h2>
+				
+                    <p>BBClone is a PHP based web counter. This plugin integrates BBClone into CMSimple.</p>
+				
+				<h2><a name="version">Version</a><a class="toplink" href="#">Back to top</a></h2>
+				
+					<p>This is currently version 1.0.0 of the plugin, released 3th November 2014.</p>
+								
+				<h2><a name="requirements">Requirements</a><a class="toplink" href="#">Back to top</a></h2>
+					
+					<h3><a name="requirements-cmsimple">Supported CMSimple versions</a><a class="toplink" href="#">Back to top</a></h3>
+					
+						<ul>
+							<li><b>CMSimple XH 1.5 or higher (recommended)</b></li>
+							<li>CMSimple XH 1.4.2</li>
+							<li>CMSimple XH 1.1.4</li>
+							<li>CMSimple Realblog 1.5 or higher</li>
+							<li style="text-decoration: line-through;">CMSimple LE 3.4(.1) (Pluginloader needed, see installation guide below)</li>
+							<li style="text-decoration: line-through;">CMSimple 3.3 (Pluginloader needed, see installation guide below)</li>
+						</ul>
+				
+				<h2><a name="installation">Installation</a><a class="toplink" href="#">Back to top</a></h2>
+				
+					<h3><a name="installation-xh">CMSimple XH</a><a class="toplink" href="#">Back to top</a></h3>
+						<ul>
+							<li>Download the plugin.</li>
+                            <li>Copy the <code>bbclone</code> folder into the CMSimple root.</code></li>
+                            <li>In the <code>plugins</code> folder, create a new folder called <code>bbclone</code>.</li>
+                            <li>Copy the plugin files into the created folder.</li>
+						</ul>
+					
+					<h3><a name="installation-other">CMSimple 3.3 and CMSimple LE</a><a class="toplink" href="#">Back to top</a></h3>
+					
+						<p class="notice">This installation guide is left from older versions. This version does not support CMSimple LE and the original CMSimple, see <a href="#requirements-cmsimple">supported CMSimple versions</a>.</p>
+					
+						<p>The images are taken in CMSimple 3.3, but should help installing the plugin in CMSimple LE, too.</p>
+						<ul>
+							<li>Download a working Pluginloader, see <a href="http://cmsimplewiki.com/doku.php/pluginloader/pluginloader">CMSimple Wiki: Pluginloader</a> or the <a href="http://www.cmsimpleforum.com/">CMSimple Forum</a> to get the current version.</li>
+							<li>Create a folder named 'plugins' in the CMSimple root directory.</li>
+							<li>Extract the pluginloader into this directory. You will have plugins/index.php and plugins/pluginloader.</li>
+							<li>Edit cmsimple/config.php and add: </li>
+						</ul>
+						<pre class="brush: php">
+$cf['plugins']['folder'] = "plugins";
+						</pre>
+						<ul>
+							<li>Go in your CMSimple backend, choose 'Settings' and edit configuration:</li>
+						</ul>
+							
+							<img src="bbclone-cmsimple-3-3.png" alt="CMSimple 3.3 settings." />
+
+						<ul>
+							<li>Look for the plugins_folder configuration key:</li>
+						</ul>
+						
+						<img src="bbclone-cmsimple-3-3-config.png" alt="CMSimple plugins_folder configuration." />
+						
+						<ul>
+                            <li>Copy the <code>bbclone folder into the CMSimple root.</code></li>
+                            <li>In the <code>plugins</code> folder, create a new folder called <code>bbclone</code>.</li>
+                            <li>Copy the plugin files into the created folder.</li>
+						</ul>
+				
+				<h2><a name="configuration">Configuration</a><a class="toplink" href="#">Back to top</a></h2>
+				
+					<h3><a name="configuration-options">Configuration options</a><a class="toplink" href="#">Back to top</a></h3>
+					
+                        <p>There is only one configuration option:</p>
+					
+                        <ul>
+                            <li><b>track_backend</b>: Set to 'true' if the web counter should track the backend as well, 'false' if not.</li>
+                        </ul>
+                        
+					<h3><a name="configuration-file">The configuration file</a><a class="toplink" href="#">Back to top</a></h3>
+								
+					<pre class="brush: php">
+/**
+ * @file config.php
+ * @brief Containing configuration of the plugin.
+ */
+
+	/**
+	 * If backend activity should be tracked by BBClone.
+	 * @var &lt;string&gt;
+	 */
+	$plugin_cf['bbclone']['track_backend']="false";
+					</pre>
+				
+                    <h3><a name="configuration-bcclone">BBClone configuration</a><a class="toplink" href="#">Back to top</a></h3>
+                    
+                        <p>BBClone as configurable using the <code>bbclone/conf/config.php</code> file contained within the bbclone folder in the CMSimple root.</p>
+                    
+				<h2><a name="usage">Usage</a><a class="toplink" href="#">Back to top</a></h2>
+				
+                    <p>Simply go to "Plugins" > "BBClone" and select "Statistics". Using the "Go to statistics" button you can view BBClone's backend including all provided statistics.</p>
+                
+                    <p class="notice"><b>Before going live with the CMSImple system, go to the <code>bbclone</code> folder within CMSimple's root and replace the <code>var</code> folder with the folder contained in <code>var.zip</code>.</b></p>
+                    
+				<h2><a name="changelog">Changelog</a><a class="toplink" href="#">Back to top</a></h2>
+				
+				<h2><a name="license">License</a><a class="toplink" href="#">Back to top</a></h2>
+				
+					<h3><a name="license-plugin">Plugin's license</a><a class="toplink" href="#">Back to top</a></h3>
+						
+						<p>Copyright 2014 David Stutz</p>
+						
+						<p>The plugin is published under the GNU Public License Version 3. For more information see: <a href="http://www.gnu.org/licenses/" target="_blank">GNU Licenses</a></p>
+					
+						<p>The plugin is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+					
+						<p>The plugin is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</p>
+						
+					<h3><a name="license-bbclone">BBClone</a><a class="toplink" href="#">Back to top</a></h3>
+					
+						See <a href="http://bbclone.de/download.php" target="_blank">here</a> for license information.
+						
+		</div>
+		<script type="text/javascript">
+		     SyntaxHighlighter.all()
+		</script>
+	</body>
+</html>

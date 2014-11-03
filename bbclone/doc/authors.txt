@@ -1,0 +1,59 @@
+/* This file is part of BBClone (A PHP based Web Counter on Steroids)
+ *
+ * SVN FILE $Id: authors.txt 89 2013-12-11 18:12:14Z matthys $
+ *
+ * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * See doc/copying.txt for details
+ */
+
+The BBClone Team are:
+---------------------
+Joachim Kuwan:
+jo [ at ] bbclone [ dot ] de
+(developer, server and forum administration)
+
+Matthijs van Wageningen:
+matthys [ at ] bbclone [ dot ] de
+(developer, forum moderation)
+
+François Pradignac:
+prad [ at ] bbclone [ dot ] de
+(developer, forum moderation)
+
+
+Retired team members:
+---------------------
+Amaury Amblard-Ladurantie:
+amaury [ at ] mandrakesoft [ dot ] com
+(original author)
+
+Laurent Jacques:
+ljacques [ at ] fyma [ dot ] ucl [ dot ] ac [ dot ] be
+(former maintainer)
+
+Olliver Wichmann:
+olliver [ dot ] wichmann [ at ] gmx [ dot ] net
+(former maintainer)
+
+Dave Higgins:
+dave [ at ] higginsnet [ dot ] com
+(former developer)
+
+Christoph Brill
+egore911 [ at ] egore911 [ dot ] de
+(former maintainer)
+
+Rob Farnell:
+rjfarnell [ at ] msn [ dot ] com
+(public relations, forum moderation)
