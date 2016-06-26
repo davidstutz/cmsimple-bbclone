@@ -72,6 +72,15 @@ $robot = array(
     ),
     "uri" => "http://www.80legs.com/"
   ),
+  "anchorCache" => array(
+    "icon" => "anchorCache",
+    "title" => "anchorCache",
+    "rule" => array(
+      "anchorcache\.eu" => "",
+	  "^anchorCache" => ""
+    ),
+    "uri" => "http://anchorcache.eu/"
+  ),
   "a1sitemap" => array(
     "icon" => "a1sitemap",
     "title" => "A1 Sitemap",
