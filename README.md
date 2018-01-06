@@ -2,7 +2,9 @@
 
 CMSimple BBClone is a CMSimple plugin to use [BBClone](http://bbclone.de/) as web counter.
 
-Documentation: [http://davidstutz.github.io/cmsimple-bbclone/help/help_en.htm](http://davidstutz.github.io/cmsimple-bbclone/help/help_en.htm).
+Documentation: [http://davidstutz.de/cmsimplexhdemo/plugins/bbclone/help/help_en.htm](http://davidstutz.de/cmsimplexhdemo/plugins/bbclone/help/help_en.htm).
+
+Project webpage: [http://davidstutz.de/projects/cmsimple-plugins/](http://davidstutz.de/projects/cmsimple-plugins/)
 
 Other CMSimple plugins:
 
@@ -16,7 +18,7 @@ Other CMSimple plugins:
 2. In your `plugins` folder create a new folder called `bbclone`.
 3. Copy the downloaded files into the created folder.
 
-**Before going live with the CMSImple system, go to the `bbclone` folder within CMSimple's root and replace the `var` folder with the folder contained in `var.zip`.**
+**Before going live with the CMSimple system, go to the `bbclone` folder within CMSimple's root and replace the `var` folder with the folder contained in `var.zip`.**
 
 ## Requirements & Compatibility
 
@@ -24,12 +26,13 @@ Other CMSimple plugins:
 
 Also tested on:
 
-* CMSimple XH 1.4.2 and 1.1.4.
+* CMSimple XH 1.4.2 (or higher) and 1.1.4.
 * CMSimple Realblog 1.5 or higher.
+* CMSimple 4.7.3.
 
 ## License
 
-Copyright 2014 David Stutz
+Copyright 2014 - 2018 David Stutz
 
 The plugin is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 

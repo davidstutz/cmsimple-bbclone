@@ -23,15 +23,15 @@
  *
  *  @see <http://www.gnu.org/licenses/>.
  */
-
-if (!defined('CMSIMPLE_XH_VERSION')) {
-    header('HTTP/1.0 403 Forbidden');
-    exit;
-}
  
 if (!class_exists('BBClone')) require dirname(__FILE__)."/bbclone.php";
 
-if (isset($bbclone))
+if (function_exists('XH_registerStandardPluginMenuItems'))
+{
+    XH_registerStandardPluginMenuItems(true);
+}
+
+if ((function_exists('XH_wantsPluginAdministration') AND XH_wantsPluginAdministration('bbclone')) OR isset($bbclone))
 {
 	global $sn, $plugin_tx;
 

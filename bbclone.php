@@ -74,7 +74,7 @@ class BBClone {
 	/**
 	 * Version.
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 	
 	/**
 	 * @static
@@ -97,7 +97,7 @@ class BBClone {
 	 */
 	public static function release_date() 
 	{
-	   return "3th November 2014";
+	   return "January 6th 2018";
 	}
 
 	/**
