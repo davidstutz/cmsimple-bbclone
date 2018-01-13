@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: html.php 227 2014-01-14 14:24:08Z matthys $
+ * SVN FILE $Id: html.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -179,7 +179,7 @@ class bbc_html {
           ."<!--\n"
           ."This is BBClone $BBC_VERSION\n"
           ."Homebase: http://www.bbclone.de/\n"
-          ."Copyright: 2001-2014 The BBClone Team\n"
+          ."Copyright: 2001-2015 The BBClone Team\n"
           ."License: GNU/GPL, version 3 or later\n"
           ."-->\n";
   }

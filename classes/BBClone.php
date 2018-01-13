@@ -31,6 +31,9 @@
  * 
  * \mainpage
  */
+ 
+Namespace BBClone;
+ 
 
 if (!function_exists('page_url'))
 {
@@ -69,6 +72,7 @@ if (!function_exists('page_url'))
  * @since 1.0.0
  * @package bbclone
  */
+ 
 class BBClone {
 	
 	/**

@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: de.php 247 2014-02-10 11:38:34Z joku $
+ * SVN FILE $Id: de.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -54,6 +54,8 @@ $extensions = array(
 "tel" => "Kontakte",
 "xxx" => "Erotik",
 
+"a1" => "Anonymous Proxy",
+"a2" => "Satellite Provider",
 "ac" => "Ascension",
 "ad" => "Andorra",
 "ae" => "Vereinigte Arabische Emirate",
@@ -64,6 +66,7 @@ $extensions = array(
 "am" => "Armenien",
 "an" => "Niederländische Antillen",
 "ao" => "Angola",
+"ap" => "Asien-Pazifik",
 "aq" => "Antarktis",
 "ar" => "Argentinien",
 "as" => "Amerikanisch Samoa",
@@ -658,7 +661,26 @@ Beispiele:<br />
 "BBClone zählt seine eigenen Seiten<br />
 Beispiele:<br />
 \$BBC_HITS =1;<br />
-\$BBC_HITS =&quot;&quot;;"
+\$BBC_HITS =&quot;&quot;;",
+
+"config_BBC_USE_ORIGINAL_URI" =>
+"Aktivieren Sie diese Option, wenn die &quot;Die ersten besuchten Seiten&quot; URI's nicht funktionieren auf Grund der Filterung der UR. Dies kann passieren wenn Sie BBClone mit Content
+Management Systems (CMS) verwenden, welche sehr lange (complex) URI Namen verwenden.<br />
+HINWEISS: Diese Option ändert die Aufzeichnug der URL.<br />
+Es muss die Statistik eventuell zurückgesetzt werden.<br />
+Beispiele:<br />
+\$BBC_USE_ORIGINAL_URI = 1;	=> No filtering, use original URI<br />
+\$BBC_USE_ORIGINAL_URI = &quot;&quot;;	=> Filter URI (default)",
+
+"config_BBC_MAX_PAGENAME" =>
+"Die maximale Anzahl der Zeichen für den Seitennamen.<br />
+Lange Seitennamen werden gekürzt, führend mit &quot;...&quot;<br />
+HINWEISS: Diese Option änder die Seitenanzeige,<br />
+wie die Seitennamen gespeichert werden,<br />
+es muss die Statistik eventuell zurückgesetzt werden.<br />
+Beispiele:<br />
+
+\$BBC_MAX_PAGENAME = 60;	=> 60 characters (default)"
 
 );
 ?>

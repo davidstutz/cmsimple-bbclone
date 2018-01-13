@@ -23,7 +23,4 @@
  *
  *  @see <http://www.gnu.org/licenses/>.
  */
-
-if (!class_exists('BBClone')) require dirname(__FILE__) . "/bbclone.php";
-
-BBClone::init();
+BBClone\BBClone::init();

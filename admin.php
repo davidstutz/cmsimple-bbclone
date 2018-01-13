@@ -23,9 +23,8 @@
  *
  *  @see <http://www.gnu.org/licenses/>.
  */
+Namespace BBClone;
  
-if (!class_exists('BBClone')) require dirname(__FILE__)."/bbclone.php";
-
 if (function_exists('XH_registerStandardPluginMenuItems'))
 {
     XH_registerStandardPluginMenuItems(true);
@@ -37,8 +36,6 @@ if ((function_exists('XH_wantsPluginAdministration') AND XH_wantsPluginAdministr
 
 	$f = "bbclone";
 	
-	/* initvar() for POST AND GET support. */
-	initvar('admin');
 	
 	$o .= print_plugin_admin('ON');
 	

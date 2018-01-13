@@ -1,8 +1,8 @@
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: changelog.txt 246 2014-02-10 11:31:32Z joku $
+ * SVN FILE $Id: changelog.txt 360 2015-12-23 18:25:49Z matthys $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,19 +17,33 @@
  * See doc/copying.txt for details
  */
 
+0.6.4
+-----
+* Update: Now detects Windows 10 correctly.
+* Update: Languages where possible.
+* Update: Added new domains as there where some new additions.
+* Update: New detections for Browsers, OS and Robots. With thanks to all forum users who submitted updates.
+
+0.6.3
+-----
+* NEW: You can now sellect if you want to use stripped-down or the original uri with the option $BBC_USE_ORIGINAL_URI
+* NEW: The max. characters for the page name is now more flexable with the option $BBC_MAX_PAGENAME
+* Update: Added new domains as there where some new additions.
+* Update: New detections for Browsers, OS and Robots. With thanks to all forum users who submitted updates.
+
 0.6.2
 -----
-* NEW: GeoIP PHP/Perl Module plugin added
-* Update: Corrected Top Origin for Global Stats
-* Update: Improved Top Hosts for Global Stats
-* Update: Languages where possible (now including template for new languages)
+* NEW: GeoIP PHP/Perl Module plugin added.
+* Update: Corrected Top Origin for Global Stats.
+* Update: Improved Top Hosts for Global Stats.
+* Update: Languages where possible (now including template for new languages).
 * Update: Added new domains as there where some new additions.
 * Update: New detections for Browsers, OS and Robots. With thanks to all forum users who submitted updates.
 
 0.6.1
 -----
-* Change: Language code changed to utf-8
-* Update: GeoIP detection for IPv6 and IPv4
+* Change: Language code changed to utf-8.
+* Update: GeoIP detection for IPv6 and IPv4.
 * Update: Added new domains as there where some new additions.
 * Update: New detections for Browsers, OS and Robots. With thanks to all forum users who submitted updates.
 
