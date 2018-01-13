@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: os.php 63 2013-12-05 15:19:31Z joku $
+ * SVN FILE $Id: os.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -40,6 +40,16 @@ $os = array(
       "amiga" => ""
     ),
     "uri" => ""
+  ),
+  // Before Android detection, due to Windows Phone running on Android-based phones
+  "windowsphone" => array(
+    "icon" => "windowsphone",
+    "title" => "Windows Phone",
+    "rule" => array(
+      "Windows Phone ([0-9.]{1,10})" => "\\1",
+      "Windows Phone OS ([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.windowsphone.com"
   ),
   "android" => array(
     "icon" => "android",
@@ -94,7 +104,8 @@ $os = array(
     "icon" => "blackberry",
     "title" => "BlackBerry OS",
     "rule" => array(
-      "BlackBerry" => ""
+      "BlackBerry" => "",
+      "BB10;" => ""
     ),
     "uri" => "http://www.blackberry.com/"
   ),
@@ -139,6 +150,14 @@ $os = array(
       "Commodore[ ]?64" => ""
     ),
     "uri" => ""
+  ),
+  "cros" => array(
+    "icon" => "cros",
+    "title" => "Chrome OS",
+    "rule" => array(
+      "CrOS" => ""
+    ),
+    "uri" => "http://getchrome.eu/"
   ),
   "darwin" => array(
     "icon" => "darwin",
@@ -605,6 +624,15 @@ $os = array(
 	),
 	"uri" => "http://www.microsoft.com/windows/"
   ),
+  "windows10" => array(
+    "icon" => "windows8",
+    "title" => "Windows 10",
+    "rule" => array(
+     "wi(n|ndows)[ \-]?nt[ /]?6\.4" => "",
+     "wi(n|ndows)[ \-]?nt[ /]10\.0" => ""
+    ),
+	"uri" => "http://www.microsoft.com/windows/"
+  ),
   "windowsmc" => array(
     "icon" => "windowsxp",
     "title" => "Windows Media Center",
@@ -730,7 +758,8 @@ $os = array(
       "Configuration[ /]CLDC([0-9.]{1,10})" => "\\1",
       "MIDP" => "",
       "UP\.(Browser|Link)" => "",
-      "ibisBrowser" => ""
+      "ibisBrowser" => "",
+      "Mobile" => ""
    ),
    "uri" => ""
   ),

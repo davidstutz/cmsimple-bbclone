@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: sk.php 241 2014-02-06 18:39:59Z joku $
+ * SVN FILE $Id: sk.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,35 +25,37 @@ $extensions = array(
 "localdomain" => "Lokalni",
 "numeric" => "Číselná",
 "unknown" => "Neznámy",
-"museum" => "Musej",
-"travel" => "Potovanja",
+"museum" => "Múzeum",
+"travel" => "Cestovanie",
 "ipv4" => "IPv4",
 "ipv6" => "IPv6",
 
 "aero" => "Aero",
 "arpa" => "Sieťova infraštruktúra",
 "asia" => "Asia-Pacific",
-"coop" => "Coop",
+"coop" => "Kooperatívny",
 "info" => "Informačné servery",
-"jobs" => "Zaposlovanje",
-"mobi" => "Mobiles",
+"jobs" => "Práca",
+"mobi" => "Mobilný",
 "name" => "Osobné servery",
-"post" => "Poštne storitve",
+"post" => "Poštovné servery",
 
 "biz" => "Biznis servery",
-"cat" => "Catalan",
+"cat" => "Katalánsko",
 "com" => "Komerčné servery",
 "edu" => "Školstvo",
-"gal" => "Galicijski",
+"gal" => "Gália",
 "gov" => "Vládne servery USA",
 "int" => "Medzinárodné organizácie",
 "mil" => "Vojenské servery USA",
 "net" => "Sieťová infraštruktúra",
 "org" => "Nevládne organizácie",
-"pro" => "Professional",
-"tel" => "Imenik",
-"xxx" => "Pornografski",
+"pro" => "Profesionál",
+"tel" => "Kontakty",
+"xxx" => "Pornografia",
 
+"a1" => "Аnonymný proxy",
+"a2" => "Satelitný Provider",
 "ac" => "Ascension",
 "ad" => "Andorra",
 "ae" => "Spojené arabské emiráty",
@@ -64,6 +66,7 @@ $extensions = array(
 "am" => "Arménia",
 "an" => "Holandské Antily",
 "ao" => "Angola",
+"ap" => "Asia-Pacific",
 "aq" => "Antarktída",
 "ar" => "Argentína",
 "as" => "Americká Samoa",
@@ -121,7 +124,7 @@ $extensions = array(
 "er" => "Eritrea",
 "es" => "Španielsko",
 "et" => "Etiópia",
-"eu" => "European Union",
+"eu" => "Európska Únia",
 "fi" => "Fínsko",
 "fj" => "Fidži",
 "fk" => "Falklandy",
@@ -134,9 +137,9 @@ $extensions = array(
 "gf" => "Francúzska Guyana",
 "gg" => "Guernsey",
 "gh" => "Ghana",
-"gi" => "Gibraltar",
+"gi" => "Gibraltár",
 "gl" => "Grónsko",
-"gm" => "Gambie",
+"gm" => "Gambia",
 "gn" => "Guinea",
 "gp" => "Guadeloupe",
 "gq" => "Rovníková Guinea",
@@ -172,8 +175,8 @@ $extensions = array(
 "ki" => "Kiribati",
 "km" => "Komory",
 "kn" => "Svatý Kitts a Nevis",
-"kp" => "North Korea",
-"kr" => "Kórea",
+"kp" => "Severná Kórea",
+"kr" => "Južná Kórea",
 "kw" => "Kuvajt",
 "ky" => "Kajmanské ostrovy",
 "kz" => "Kazachstan",
@@ -273,7 +276,7 @@ $extensions = array(
 "tl" => "Timor Leste",
 "tm" => "Turkmenistán",
 "tn" => "Tunisko",
-"to" => "Tonga",
+"to" => "Tongo",
 "tp" => "Východný Timor",
 "tr" => "Turecko",
 "tt" => "Trinidad a Tobago",
@@ -304,11 +307,11 @@ $extensions = array(
 // No longer active but needed for history purpose
 "bl" => "Saint-Barthélemy",
 "bv" => "Bouvet",
-"bq" => "Caribbean Nizozemska",
+"bq" => "Holandský Karibik",
 "cs" => "Srbsko a Čierna hora",
-"eh" => "Zahodna Sahara",
+"eh" => "Západná Sahara",
 "gb" => "Veľká Británia",
-"mf" => "Saint Martin",
+"mf" => "Svatý Martin",
 "sj" => "Ostrovy Svalbard a Jan Mayen",
 "ss" => "Južný Sudán",
 "um" => "Malé vzdialené ostrovy patriace USA",
@@ -343,16 +346,16 @@ $translation = array(
 "misc_other" => "Iný",
 "misc_unknown" => "Neznámy",
 "misc_second_unit" => "s",
-"misc_ignored" => "prezrte",
+"misc_ignored" => "ignorované",
 
 // The Navigation Bar
 "navbar_main_site" => "Hlavná strana",
 "navbar_configuration" => "Konfigurácia",
 "navbar_global_stats" => "Súhrná štatistika",
 "navbar_detailed_stats" => "Podrobná štatistika",
-"navbar_time_stats" => "Časová štatistika",
-"navbar_language" => "Jezik",
-"navbar_go" => "Pojdi",
+"navbar_time_stats" => "História",
+"navbar_language" => "Jazyk",
+"navbar_go" => "Vstúpiť",
 
 // Detailed Stats words
 "dstat_id" => "ID",
@@ -367,11 +370,11 @@ $translation = array(
 "dstat_green_rows" => "zelený riadok",
 "dstat_blue_rows" => "modrý riadok",
 "dstat_red_rows" => "červený riadok",
-"dstat_search" => "Search",
-"dstat_last_page" => "Last Page",
+"dstat_search" => "Hľadať",
+"dstat_last_page" => "Posledná stránka",
 "dstat_last_visit" => "posledná návšteva",
-"dstat_robots" => "roboti",
-"dstat_my_visit" => "Vyhľadajte informácie o tejto IP adresa",
+"dstat_robots" => "Roboti",
+"dstat_my_visit" => "Vyhľadajte informácie o tejto IP adrese",
 "dstat_no_data" => "Dáta nedostupné",
 "dstat_prx" => "Proxy Server",
 "dstat_ip" => "IP Addresa",
@@ -380,7 +383,7 @@ $translation = array(
 "dstat_pages" => "Strana",
 "dstat_visit_length" => "Dĺžka prehliadania",
 "dstat_reloads" => "Znova načítané",
-"dstat_whois_information" => "Iskanje informacij o tem IP adress",
+"dstat_whois_information" => "Nájdi informácie o tejto IP adrese",
 
 // Global Stats words
 "gstat_accesses" => "Prístupy",
@@ -406,12 +409,12 @@ $translation = array(
 "tstat_fr" => "Pi",
 "tstat_sa" => "So",
 
-"tstat_full_su" => "Nedelja",
-"tstat_full_mo" => "Ponedeljek",
-"tstat_full_tu" => "Torek",
-"tstat_full_we" => "Sreda",
-"tstat_full_th" => "Četrtek",
-"tstat_full_fr" => "Petek",
+"tstat_full_su" => "Nedeľa",
+"tstat_full_mo" => "Pondelok",
+"tstat_full_tu" => "Utorok",
+"tstat_full_we" => "Streda",
+"tstat_full_th" => "Štvrtok",
+"tstat_full_fr" => "Piatok",
 "tstat_full_sa" => "Sobota",
 
 "tstat_jan" => "Jan",
@@ -427,16 +430,16 @@ $translation = array(
 "tstat_nov" => "Nov",
 "tstat_dec" => "Dec",
 
-"tstat_full_jan" => "January",
-"tstat_full_feb" => "February",
+"tstat_full_jan" => "Január",
+"tstat_full_feb" => "Február",
 "tstat_full_mar" => "Marec",
-"tstat_full_apr" => "April",
-"tstat_full_may" => "May",
-"tstat_full_jun" => "June",
-"tstat_full_jul" => "July", 
+"tstat_full_apr" => "Apríľ",
+"tstat_full_may" => "Máj",
+"tstat_full_jun" => "Jún",
+"tstat_full_jul" => "Júl", 
 "tstat_full_aug" => "August",
 "tstat_full_sep" => "September",
-"tstat_full_oct" => "October",
+"tstat_full_oct" => "Október",
 "tstat_full_nov" => "November",
 "tstat_full_dec" => "December",
 
@@ -456,9 +459,9 @@ $translation = array(
 "config_explanations" => "Vysvetlivky",
 
 "config_BBC_MAINSITE" =>
-"Ak nastavíte túto hodnotu bude generovaná štatistika práve pre túto linku.
+"Ak nastavíte túto hodnotu bude generovaná štatistika práve pre toto URL.
 Defaultne je hodnota správne nastavená na predchádzajúci (parent) adresár.
-V prípade že vaša stránka je umiestnená inde, budete musieť prispôsobiť
+V prípade že vaša stránka je umiestnená inde budete musieť prispôsobiť
 túto hodnotu na správnu.<br />
 Príklad:<br />
 \$BBC_MAINSITE = &quot;http://www.mojserver.sk/&quot;;<br />
@@ -487,7 +490,7 @@ Príklad:<br />
 \$BBC_TITLEBAR = &quot;Moja štatistika zo dňa %DATE vypadá takto:&quot;;<br/>",
 
 "config_BBC_LANGUAGE" =>
-"BBClone defaultná jazyková lokalizácia, v prípade že nieje špecifikovaná v
+"BBClone defaultná jazyková lokalizácia v prípade že nieje špecifikovaná v
 prehliadači.
 Podporované sú nasledovné jazykové verzie:
 <p>ar, bg, bs, ca, cs, da, de, el, en, es, fi, fr, hu, id, it, ja, ko, lt, mk, nb,
@@ -498,7 +501,7 @@ nl, pl, pt, pt-br, ro, ru, sk, sl, sv, th, tr, ua, zh-cn a zh-tw</p>",
 klik od
 toho istého návštevníka vrámci tejto dĺžky bude povazovaný za jednu
 návštevu.
-Default je 30 minút (1800 sekúnd) čož je de facto web štandard, ale v
+Default je 30 minút (1800 sekúnd) čo je de facto web štandard, ale v
 závislosti
 na vašich potrebách môžete túto hodnotu upraviť.<br />
 Príklad:<br />
@@ -526,7 +529,7 @@ detailnom
 <li>ext => Krajina odkiaľ je návštevník</li>
 <li>referer => Linka z ktorej prišiel návštevník (ak je dostupná)</li>
 <li>page => Posledná navštívená stránka</li>
-<li>search => Otázka hľadal návštevník vo vyhľadávači (ak je k dispozícii)</li>
+<li>search => Otázka akú hľadal návštevník vo vyhľadávači (ak je k dispozícii)</li>
 </ul>
 Tieto premenné budú prehľadne uložené v stĺpcoch.<br />
 Príklad:<br />
@@ -538,15 +541,15 @@ browser&quot;;
 "config_BBC_TIME_OFFSET" =>
 "V prípade že server nemá správne definovaný čas, môžete ho prispôsobiť.
 Urobíte to tak že pripočítate alebo odpočítate od tohoto času minúty.
-Záporná hodnota posunie čas do záporu, kladná hodnota napred.<br />
+Záporná hodnota posunie čas spať, kladná hodnota napred.<br />
 Príklad:<br />
 \$BBC_TIME_OFFSET = 300;<br />
 \$BBC_TIME_OFFSET = -300;<br />
 \$BBC_TIME_OFFSET = 0;",
 
 "config_BBC_NO_DNS" =>
-"Toto nastavenie určuje či sa má IP adresa prevádzať na host adresu alebonie.
-Pokiaľ host poskytuje o sebe veľa informácií, výsledkom môže byť pád vašejstránky.
+"Toto nastavenie určuje či sa má IP adresa prevádzať na host adresu alebo nie.
+Pokiaľ host poskytuje o sebe veľa informácií, výsledkom môže byť pád vašej stránky.
 Ak je váš DNS server pomalý alebo má limitovanú kapacitu zapnite túto voľbu
 a vyriešite problém.<br />
 Príklad:<br />
@@ -570,8 +573,8 @@ Príklad:<br />
 \$BBC_IGNORE_IP = &quot;&quot;;",
 
 "config_BBC_IGNORE_REFER" =>
-"V prípade že chcete niektorých návštevníkov nezahrňovať do detailného
-výpisu,
+"V prípade že chcete niektorých návštevníkov nezahŕňať do detailného
+výpisu
 môžete špecifikovať kľúčové slová ktoré ich charakterizujú.
 Ak budete definovať viac oddeľte ich čiarkou.<br />
 Príklad:<br />
@@ -616,38 +619,56 @@ Príklad:<br />
 \$BBC_PURGE_SINGLE = &quot;&quot;;",
 
 "config_BBC_LOADTIME" =>
-"Generate the page load-time in seconds at bottom of the page.<br />
-Examples:<br />
+"V spodnej časti stránky sa zobrazí čas načítania stránky v sekundách.<br />
+Príklad:<br />
 \$BBC_LOADTIME =&quot;&quot;;<br />
 \$BBC_LOADTIME = 1;",
 
 "config_BBC_EXT_LOOKUP" =>
-"This options defines, whether IP addresses are looked up to determine location (country).<br />
-These plug-ins are NO part of BBClone, please keep this in mind.<br />
+"Táto voľba určuje či sa u IP adresy má pozrieť na určenie polohy (štátu).<br />
+Majte na pamäti že tieto pluginy niesu súčasťou BBClone.<br />
 <ul>
-<li>IP2EXT => Use the old IP2EXT to Look-Up IP addresses</li>
-<li>GEOIP => Use GeoIP API plug-in</li>
-<li>GEOIP-mod => Use GeoIP PHP/Perl Module (geoip.so)</li>
+<li>IP2EXT => Použitie starého IP2EXT na preskúmanie IP adresy</li>
+<li>GEOIP => Použitie GeoIP API plugu</li>
+<li>GEOIP-mod => Použitie GeoIP PHP/Perl Modulu (geoip.so)</li>
 </ul>
-Examples:<br />
+Príklad:<br />
 \$BBC_EXT_LOOKUP =&quot;&quot;;<br />
 \$BBC_EXT_LOOKUP =&quot;IP2EXT&quot;;<br />
 \$BBC_EXT_LOOKUP =&quot;GEOIP&quot;;<br />
 \$BBC_EXT_LOOKUP =&quot;GEOIP-mod&quot;;",
 
 "config_BBC_CSS_FILE" =>
-"BBClone CSS File Name<br />
-Please note; Within this css file you can change the way BBClone looks.<br />
-(for example change colors or what text size/fonts are used)<br />
-Examples:<br />
+"BBClone CSS Súbor<br />
+Poznámka: Týmto súborom možete zmeniť to ako bude BBClone vypadať.<br />
+(napríklad zmeníte farbu alebo veľkosť textu/použitý font)<br />
+Príklad:<br />
 \$BBC_CSS_FILE =&quot;bbclone.css&quot;;<br />
 \$BBC_CSS_FILE =&quot;other.css&quot;;",
 
 "config_BBC_HITS" =>
-"Include BBClone hits within the Stats<br />
-Examples:<br />
+"Zahrnúť pohyb po BBClone do štatistiky.<br />
+Príklad:<br />
 \$BBC_HITS =1;<br />
-\$BBC_HITS =&quot;&quot;;"
+\$BBC_HITS =&quot;&quot;;",
+
+"config_BBC_USE_ORIGINAL_URI" =>
+"Zapnite túto možnosť ak &quot;Najnavštevovaniejšie stránky&quot; nepracujú z dôvodu
+filtrovania URL. To sa može stať ak použijete BBClone s nejakým Redakčným
+Systémom (CMS) ktorý používa veľmi dlhé (complexné) URL.<br />
+DÔLEŽITÁ POZNÁMKA: Táto možnosť zmení ako sa budú ukladať URL,
+takže budete potrebovať resetovať štatistiky.<br />
+Príklad:<br />
+\$BBC_USE_ORIGINAL_URI = 1;	=> Nefiltruj, použij originálny URL<br />
+\$BBC_USE_ORIGINAL_URI = &quot;&quot;;	=> Filtruj URL (default)",
+
+"config_BBC_MAX_PAGENAME" =>
+"Maximálny počet znakov pre názov stránky.<br />
+Dlhé názvy stránok budú skracované na začiatku s &quot;...&quot;<br />
+DÔLEŽITÁ POZNÁMKA: Táto možnosť zmení ako sa budú ukladať URL,
+takže budete potrebovať resetovať štatistiky.<br />
+Príklad:<br />
+\$BBC_MAX_PAGENAME = 60;	=> 60 znakov (default)"
 
 );
 ?>

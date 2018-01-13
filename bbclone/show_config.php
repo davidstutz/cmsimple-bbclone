@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: show_config.php 242 2014-02-06 18:41:52Z joku $
+ * SVN FILE $Id: show_config.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -79,6 +79,8 @@ echo $BBC_HTML->html_begin()
     .$BBC_HTML->show_config("BBC_EXT_LOOKUP")
     .$BBC_HTML->show_config("BBC_CSS_FILE")
     .$BBC_HTML->show_config("BBC_HITS", 1)
+    .$BBC_HTML->show_config("BBC_USE_ORIGINAL_URI", 1)
+    .$BBC_HTML->show_config("BBC_MAX_PAGENAME")
     ."</table>\n"
     ."</td></tr></table>\n"
     ."</td></tr></table>\n"

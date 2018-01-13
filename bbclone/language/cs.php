@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: cs.php 241 2014-02-06 18:39:59Z joku $
+ * SVN FILE $Id: cs.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -54,6 +54,8 @@ $extensions = array(
 "tel" => "Kontakty",
 "xxx" => "dospělé kulturních aa",
 
+"a1" => "Anonymní proxy",
+"a2" => "Satelitní Provider",
 "ac" => "Ascension",
 "ad" => "Andorra",
 "ae" => "Spojené arabské emiráty",
@@ -64,6 +66,7 @@ $extensions = array(
 "am" => "Arménie",
 "an" => "Nizozemské Antily",
 "ao" => "Angola",
+"ap" => "Asia-Pacific",
 "aq" => "Antarktida",
 "ar" => "Argentina",
 "as" => "Americká Samoa",
@@ -407,12 +410,12 @@ $translation = array(
 "tstat_sa" => "So",
 
 "tstat_full_su" => "Neděle",
-"tstat_full_mo" => "pondělí",
+"tstat_full_mo" => "Pondělí",
 "tstat_full_tu" => "Úterý",
-"tstat_full_we" => "středu",
-"tstat_full_th" => "Ve čtvrtek",
-"tstat_full_fr" => "pátek",
-"tstat_full_sa" => "Saturday",
+"tstat_full_we" => "Středu",
+"tstat_full_th" => "Čtvrtek",
+"tstat_full_fr" => "Pátek",
+"tstat_full_sa" => "Sobotu",
 
 "tstat_jan" => "Led",
 "tstat_feb" => "Úno",
@@ -427,15 +430,15 @@ $translation = array(
 "tstat_nov" => "Lis",
 "tstat_dec" => "Pro",
 
-"tstat_full_jan" => "leden",
-"tstat_full_feb" => "únor",
+"tstat_full_jan" => "Leden",
+"tstat_full_feb" => "Únor",
 "tstat_full_mar" => "Březen",
-"tstat_full_apr" => "duben",
-"tstat_full_may" => "May",
-"tstat_full_jun" => "června",
-"tstat_full_jul" => "červenec",
+"tstat_full_apr" => "Duben",
+"tstat_full_may" => "Květen",
+"tstat_full_jun" => "Červen",
+"tstat_full_jul" => "Červenec",
 "tstat_full_aug" => "August",
-"tstat_full_sep" => "září",
+"tstat_full_sep" => "Září",
 "tstat_full_oct" => "Říjen",
 "tstat_full_nov" => "Listopad",
 "tstat_full_dec" => "Prosinec",
@@ -448,7 +451,7 @@ $translation = array(
 
 // Loadtime notice
 "generated" => "Stránka vygenerována za ",
-"seconds" => " secondy",
+"seconds" => " vteřin",
 
 // Configuration page words and sentences
 "config_variable_name" => "Název proměnné",
@@ -456,9 +459,9 @@ $translation = array(
 "config_explanations" => "Vysvětlivky",
 
 "config_BBC_MAINSITE" =>
-"Jestliže byla nastavena tato proměnná, bude vytvořen odkaz na Vámi zvolené umístění.
+"Jestliže byla nastavena tato proměnná bude vytvořen odkaz na Vámi zvolené umístění.
 Přednastavená hodnota odkazuje na nadřazený adresář. V případě, že je Vaše
-hlavní stránka umístěna na jiném místě, budete si chtít pravděpodobně tuto
+hlavní stránka umístěna na jiném místě budete si chtít pravděpodobně tuto
 hodnotu změnit.<br />
 Příklady:<br />
 \$BBC_MAINSITE = &quot;http://www.myserver.com/&quot;;<br />
@@ -467,7 +470,7 @@ Příklady:<br />
 
 "config_BBC_SHOW_CONFIG" =>
 "BBClone má přednastaveno zobrazení &quot;Konfigurace&quot; nahoře v hlavní nabídce.
-V případě, že si nepřejete konfiguraci zobrazovat, nechte tuto hodnotu prázdnou.
+V případě že si nepřejete konfiguraci zobrazovat nechte tuto hodnotu prázdnou.
 <br />
 Přiklady:<br />
 \$BBC_SHOW_CONFIG = 1;<br />
@@ -495,7 +498,7 @@ nl, pl, pt, pt-br, ro, ru, sk, sl, sv, th, tr, ua, zh-cn a zh-tw</p>",
 "config_BBC_MAXTIME" =>
 "Tato proměnná stanovuje délku unikátní návětěvy v sekundách. Každý přístup od stejného
 návštěvníka v tomto intervalu bude počítán jako jedna návštěva. Přednastavená hodnota
-je de facto webový standard, a to 30 minut (1800 sekund), ale záleží pouze na Vás, jakou
+je de facto webový standard a to 30 minut (1800 sekund), ale záleží pouze na Vás jakou
 hodnotu si nastavíte.<br />
 Příklady:<br />
 \$BBC_MAXTIME = 0;<br />
@@ -507,22 +510,22 @@ Doporučuje se nenastavovat hodnotu větší než 500 v důsledku zamezení dlou
 načítání.",
 
 "config_BBC_DETAILED_STAT_FIELDS" =>
-"Proměnná \$BBC_DETAILED_STAT_FIELDS určuje sloupce, které mají být zobrazeny
+"Proměnná \$BBC_DETAILED_STAT_FIELDS určuje sloupce které mají být zobrazeny
 v podrobné statistice. Možnosti jsou:
 <ul>
 <li>id => X-tý návštěvník od doby vynulování statistiky</li>
-<li>time => Čas, kdy byl zaznamenán poslední klik</li>
+<li>time => Čas kdy byl zaznamenán poslední klik</li>
 <li>visits => Počet zobrazení unikátního návštěvníka</li>
 <li>dns => Hostitelské jméno návštěvníka</li>
 <li>ip => IP adresa návštěvníka</li>
 <li>os => Operační systém návštěvníka (jestliže je k dispozici a není robot)</li>
 <li>browser => Prohlížeč návštěvníka</li>
 <li>ext => Země návštěvníka</li>
-<li>referer => Stránka, ze které návštěvník přišel (jestliže je k dispozici)</li>
+<li>referer => Stránka ze které návštěvník přišel (jestliže je k dispozici)</li>
 <li>page => Poslední prohlížená stránka</li>
 <li>search => Jaká slova hledal návštěvník ve vyhledávači (jestliže je k dispozici)</li>
 </ul>
-Sloupce s požadovanými informacemi budou zobrazeny v pořadí, v jakém jste je zadali.<br />
+Sloupce s požadovanými informacemi budou zobrazeny v pořadí v jakém jste je zadali.<br />
 Příklady:<br />
 
 \$BBC_DETAILED_STAT_FIELDS = &quot;id, time, visits, ip, ext, os, browser&quot;;
@@ -530,7 +533,7 @@ Příklady:<br />
 \$BBC_DETAILED_STAT_FIELDS = &quot;date, ext, browser, os, ip&quot;;<br />",
 
 "config_BBC_TIME_OFFSET" =>
-"V případě, že čas serveru nesouhlasí s Vaším časovým pásmem, můžete čas změnit.
+"V případě že čas serveru nesouhlasí s Vaším časovým pásmem můžete čas změnit.
 Záporné hodnoty nastaví čas zpět, kladné jej posunou dopředu.<br />
 Příklady:<br />
 
@@ -539,9 +542,9 @@ Příklady:<br />
 \$BBC_TIME_OFFSET = 0;",
 
 "config_BBC_NO_DNS" =>
-"Toto nastavnení definuje, zda IP adresy mají být překládány na hostitelské jméno.
+"Toto nastavnení definuje zda IP adresy mají být překládány na hostitelské jméno.
 Hostitelské jméno Vám řekne mnohem více o návštěvníkovi, jejich zjištování však
-může značně zpomalit Vaši stránku. To je způsobeno tím, že použité DNS servery
+může značně zpomalit Vaši stránku. To je způsobeno tím že použité DNS servery
 jsou pomalé, mají omezenou kapacitu nebo jsou nevěrohodné. Změnou této hodnoty
 můžete problém vyřešit.<br />
 Příklady:<br />
@@ -551,25 +554,25 @@ Příklady:<br />
 "config_BBC_NO_HITS" =>
 "BBClone je přednastaveno aby ukazovalo celková zobrazení (reloady/hity) v historii,
 protože dává užitečné informace o zátěži serveru. Jestliže si ale přejete
-používat unikatní zobrazení v historii, můžete změnit způsob počítání
+používat unikatní zobrazení v historii můžete změnit způsob počítání
 nastavením této proměnné.<br />
 Příklady:<br />
 \$BBC_NO_HITS = 1;<br />
 \$BBC_NO_HITS = &quot;&quot;;",
 
 "config_BBC_IGNORE_IP" =>
-"Tato možnost může být použita pro vyloučení konkrétních IP adres, případně i
-jejich rozsahů od započítávání. V případě, že chcete přidat více adres,
+"Tato možnost může být použita pro vyloučení konkrétních IP adres případně i
+jejich rozsahů od započítávání. V případě že chcete přidat více adres
 použijte čárku jako oddělovač.<br />
 Příklady:<br />
 \$BBC_IGNORE_IP = &quot;127., 192.168.&quot;;<br />
 \$BBC_IGNORE_IP = &quot;&quot;;",
 
 "config_BBC_IGNORE_REFER" =>
-"V případě, že nechcete mít ve statistikách některé odkazy na stránky, ze
-kterých návštěvnící přistupují, můžete specifikovat jedno nebo více slov, které
+"V případě že nechcete mít ve statistikách některé odkazy na stránky ze
+kterých návštěvnící přistupují, můžete specifikovat jedno nebo více slov které
 jsou obsaženy v jejich odkazu. Tím zabráníte jejich zobrazení. Chcete-li
-přidat více slov, použijte čárku jako oddělovač.<br />
+přidat více slov použijte čárku jako oddělovač.<br />
 Příklady:<br />
 \$BBC_IGNORE_REFER = &quot;spambot.org, .escort.&quot;;<br />
 \$BBC_IGNORE_REFER = &quot;&quot;;",
@@ -577,7 +580,7 @@ Příklady:<br />
 "config_BBC_IGNORE_BOTS" =>
 "Toto nastavení slouží ke změně započítávání robotů. Přednastaveno je ignorovat
 roboty v souhrných statistikách a ponechat je v ostatních. Pokud si přejete
-nezobrazovat roboty ve všech statistikách, nastavte hodnotu na &quot;2&quot;, pak budou
+nezobrazovat roboty ve všech statistikách nastavte hodnotu na &quot;2&quot; pak budou
 započítávány pouze přístupy jednotlivých návštěvníků.<br />
 Příklady:<br />
 \$BBC_IGNORE_BOTS = 2;<br />
@@ -585,66 +588,84 @@ Příklady:<br />
 \$BBC_IGNORE_BOTS = &quot;&quot;;",
 
 "config_BBC_IGNORE_AGENT" =>
-"V tomto nastavení definujete, jak BBClone rozpozná jednoho uživatele od druhého.
-Defaultně se používá jen IP adresa, která poskytuje reálné čísla ve většině
-případů. Jestliže jsou ale Vaši návštěvníci často skryti za proxy serverem,
-může vypnutím této možnoti dosáhnout reálnějších čísel. O tom, že se
+"V tomto nastavení definujete jak BBClone rozpozná jednoho uživatele od druhého.
+Defaultně se používá jen IP adresa která poskytuje reálné čísla ve většině
+případů. Jestliže jsou ale Vaši návštěvníci často skryti za proxy serverem
+může vypnutím této možnoti dosáhnout reálnějších čísel. O tom že se
 jedná o nového navštěvníka se rozhodne podle změny hodnoty hlavičky user agent.<br />
 Příklady:<br />
 \$BBC_IGNORE_AGENT = 1;<br />
 \$BBC_IGNORE_AGENT = &quot;&quot;;",
 
 "config_BBC_KILL_STATS" =>
-"Kdykoliv si přejete vymazat Vaše statistiky, můžete aktivovat tuto přoměnou
-a příští návštěvou je vymazat. Nezapomeňte ji zase poté deaktivovat, jinak
+"Kdykoliv si přejete vymazat Vaše statistiky můžete aktivovat tuto přoměnou
+a příští návštěvou je vymazat. Nezapomeňte ji zase poté deaktivovat jinak
 pravděpodobně pocítíte neobvykle nízkou návštěvnost ;)<br />
 Příklady:<br />
 \$BBC_KILL_STATS = 1;<br />
 \$BBC_KILL_STATS = &quot;&quot;;",
 
 "config_BBC_PURGE_SINGLE" =>
-"Statistiky hostu a odkazujících stránek mohou vytvářet velké objemy dat, většinou
+"Statistiky hostu a odkazujících stránek mohou vytvářet velké objemy dat většinou
 však tvořené jednorázovými návštěvníky. Zapnutím této volby můžete odstranit
 záznamy a znatelně zmenšit access.php bez ovlivnění zěbříčku přístupů a
 odkazujících stránek. Množství zobrazení bude přidáno do &quot;nespecifikovaných&quot;
-záznamů, aby byly zachováno celkové skóre.<br />
+záznamů aby bylo zachováno celkové skóre.<br />
 Příklady:<br />
 \$BBC_PURGE_SINGLE = 1;<br />
 \$BBC_PURGE_SINGLE = &quot;&quot;;",
 
 "config_BBC_LOADTIME" =>
-"Generate the page load-time in seconds at bottom of the page.<br />
-Examples:<br />
+"V spodní části stránky se zobrazí čas čtení stránky ve vteřinách.<br />
+Příklady:<br />
 \$BBC_LOADTIME =&quot;&quot;;<br />
 \$BBC_LOADTIME = 1;",
 
 "config_BBC_EXT_LOOKUP" =>
-"This options defines, whether IP addresses are looked up to determine location (country).<br />
-These plug-ins are NO part of BBClone, please keep this in mind.<br />
+"Táto volba určuje jesti se u IP adresy má zjistit určení polohy (štátu).<br />
+Mějte na paměti že tyhle pluginy nejsou súčastí BBClone.<br />
 <ul>
-<li>IP2EXT => Use the old IP2EXT to Look-Up IP addresses</li>
-<li>GEOIP => Use GeoIP API plug-in</li>
-<li>GEOIP-mod => Use GeoIP PHP/Perl Module (geoip.so)</li>
+<li>IP2EXT => Použití starého IP2EXT na prozkoumání IP adresy</li>
+<li>GEOIP => Použití GeoIP API plugu</li>
+<li>GEOIP-mod => Použití GeoIP PHP/Perl Modulu (geoip.so)</li>
 </ul>
-Examples:<br />
+Příklady:<br />
 \$BBC_EXT_LOOKUP =&quot;&quot;;<br />
 \$BBC_EXT_LOOKUP =&quot;IP2EXT&quot;;<br />
 \$BBC_EXT_LOOKUP =&quot;GEOIP&quot;;<br />
 \$BBC_EXT_LOOKUP =&quot;GEOIP-mod&quot;;",
 
 "config_BBC_CSS_FILE" =>
-"BBClone CSS File Name<br />
-Please note; Within this css file you can change the way BBClone looks.<br />
-(for example change colors or what text size/fonts are used)<br />
-Examples:<br />
+"BBClone CSS soubor<br />
+Poznámka; Tímto souborem můžete změnit to jak bude BBClone vypadat.<br />
+(například zmeníte barvu nebo velikost textu/použitý font)<br />
+Příklady:<br />
 \$BBC_CSS_FILE =&quot;bbclone.css&quot;;<br />
 \$BBC_CSS_FILE =&quot;other.css&quot;;",
 
 "config_BBC_HITS" =>
-"Include BBClone hits within the Stats<br />
-Examples:<br />
+"Započítat pohyb po BBClone do statistiky.<br />
+Příklady:<br />
 \$BBC_HITS =1;<br />
-\$BBC_HITS =&quot;&quot;;"
+\$BBC_HITS =&quot;&quot;;",
+
+"config_BBC_USE_ORIGINAL_URI" =>
+"Zapněte tuhle možnost jestli &quot;Nejnavštevovanejší stránky&quot; nepracují z důvodu
+filtrování URL. To se může stát jestli použijete BBClone s nejakým Redakčním
+Systémem (CMS) který používa moc dlouhé (complexné) URL.<br />
+DULEŽITÁ POZNÁMKA: Táto možnosť změní ukládání URL,
+takže budete muset resetovat statistiky.<br />
+Příklady:<br />
+\$BBC_USE_ORIGINAL_URI = 1;	=> Nefiltruj, použij originální URL<br />
+\$BBC_USE_ORIGINAL_URI = &quot;&quot;;	=> Filtruj URL (default)",
+
+"config_BBC_MAX_PAGENAME" =>
+"Maximální počet znaků pro název stránky.<br />
+Dlouhé názvy stránek budou zkracované na začátku s &quot;...&quot;<br />
+DULEŽITÁ POZNÁMKA: Táto možnosť změní ukládání URL,
+takže budete muset resetovat statistiky.<br />
+Příklady:<br />
+\$BBC_MAX_PAGENAME = 60;	=> 60 znaků (default)"
 
 );
 ?>

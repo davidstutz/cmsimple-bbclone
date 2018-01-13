@@ -3,7 +3,7 @@
  * 
  * SVN FILE $Id: ext_lookup_geoip.php 63 2013-12-05 15:19:31Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

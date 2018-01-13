@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: robot.php 209 2014-01-10 11:33:51Z matthys $
+ * SVN FILE $Id: robot.php 355 2015-12-11 09:02:32Z matthys $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -55,6 +55,14 @@ $robot = array(
       "192.comAgent" => ""
     ),
     "uri" => "http://www.192.com/"
+  ),
+  "200please" => array(
+    "icon" => "200please",
+    "title" => "200please Crawler",
+    "rule" => array(
+      "200PleaseBot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.200please.com/bot"
   ),
   "2dehands" => array(
     "icon" => "2dehands",
@@ -529,6 +537,14 @@ $robot = array(
       "Atomz[/ ]([0-9.]{1,10})" => "\\1"
     ),
     "uri" => ""
+  ),
+  "avira" => array(
+    "icon" => "avira",
+    "title" => "Avira SafeSearch",
+    "rule" => array(
+      "^SafeSearch microdata crawler" => ""
+    ),
+    "uri" => "https://safesearch.avira.com"
   ),
   "axel" => array(
     "icon" => "robot",
@@ -1220,12 +1236,12 @@ $robot = array(
     "uri" => ""
   ),
   "coccoc" => array(
-	"icon" => "robot",
+	"icon" => "coccoc",
 	"title" => "Coccoc",
 	"rule" => array(
 	  "coccoc[ /]([0-9.]{1,10})" => "\\1"
 	),
-	"uri" => "http://help.coccoc.vn/"
+	"uri" => "http://help.coccoc.com"
   ),
   "coldfusion" => array(
     "icon" => "coldfusion",
@@ -1426,6 +1442,7 @@ $robot = array(
     "rule" => array(
       "DAUMOA[ /]([0-9.]{1,10})" => "\\1",
       "DAUM Web Robot" => "",
+      "daum.net" => "",
       "Daum Communications Corp" => "",
       "EDI[ /]([0-9.]{1,10})" => "\\1",
       "Edacious.*Intelligent Web Robot" => "",
@@ -1618,6 +1635,14 @@ $robot = array(
       "DTS Agent" => ""
     ),
     "uri" => ""
+  ),
+  "duckduckgo" => array(
+    "icon" => "duckduckgo",
+    "title" => "DuckDuckGo",
+    "rule" => array(
+      "DuckDuckGo-Favicons-Bot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://duckduckgo.com"
   ),
   "earthcom" => array(
     "icon" => "earthcom",
@@ -2221,6 +2246,24 @@ $robot = array(
     ),
     "uri" => ""
   ),
+  "gigabot" => array(
+    "icon" => "gigablast",
+    "title" => "Gigablast",
+    "rule" => array(
+      "(Gigabot|Sitesearch)[/ ]([0-9.]{1,10})" => "\\2",
+      "GigabotSiteSearch[/ ]([0-9.]{1,10})" => "\\1",
+      "GigablastOpenSource" => ""
+    ),
+    "uri" => ""
+  ),	
+  "gimme" => array(
+    "icon" => "gimme",
+    "title" => "gimmeUSA",
+    "rule" => array(
+      "Gimme60bot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://gimme60.com"
+  ),
   "ginger" => array(
     "icon" => "ginger",
     "title" => "GingerCrawler",
@@ -2228,15 +2271,6 @@ $robot = array(
       "GingerCrawler[ /]([0-9.]{1,10})" => "\\1"
     ),
     "uri" => "http://www.gingersoftware.com/crawler_agent.htm"
-  ),
-  "gigabot" => array(
-    "icon" => "gigablast",
-    "title" => "Gigablast",
-    "rule" => array(
-      "(Gigabot|Sitesearch)[/ ]([0-9.]{1,10})" => "\\2",
-      "GigabotSiteSearch[/ ]([0-9.]{1,10})" => "\\1",
-    ),
-    "uri" => ""
   ),
   "girafabot" => array(
     "icon" => "girafa",
@@ -2376,6 +2410,14 @@ $robot = array(
       "^GPostbot" => ""
     ),
     "uri" => ""
+  ),
+  "grapeshot" => array(
+    "icon" => "grapeshot",
+    "title" => "Grapeshot",
+    "rule" => array(
+      "GrapeshotCrawler[/ ]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.grapeshot.co.uk/crawler.php"
   ),
   "gregarius" => array(
     "icon" => "robot",
@@ -3022,6 +3064,22 @@ $robot = array(
     ),
     "uri" => "http://www.linguee.com/"
   ),
+  "linkapedia" => array(
+	"icon" => "linkapedia",
+	"title" => "Linkapedia",
+	"rule" => array(
+	  "^linkapedia" => ""
+	),
+	"uri" => "http://www.linkapedia.com"
+  ),
+  "linkdex" => array(
+    "icon" => "linkdex",
+    "title" => "Linkdex",
+    "rule" => array(
+      "linkdexbot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.linkdex.com/bots/"
+  ),
   "linkguard" => array(
     "icon" => "robot",
     "title" => "Linkguard",
@@ -3189,6 +3247,14 @@ $robot = array(
     ),
     "uri" => ""
   ),
+  "ltx71" => array(
+    "icon" => "robot",
+    "title" => "LTX71",
+    "rule" => array(
+      "ltx71" => ""
+    ),
+    "uri" => "http://ltx71.com/"
+  ),
   "lwp" => array(
     "icon" => "robot",
     "title" => "lwp",
@@ -3254,12 +3320,29 @@ $robot = array(
     ),
     "uri" => ""
   ),
+  "meanpath" => array(
+    "icon" => "meanpath",
+    "title" => "Meanpath",
+    "rule" => array(
+      "meanpathbot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.meanpath.com/meanpathbot.html"
+  ),
   "mediater" => array(
     "icon" => "robot",
     "title" => "Mediater",
     "rule" => array (
       "^libwww[ /]([0-9.]{1,10})" => "\\1"
-    )
+    ),
+    "uri" => ""
+  ),
+  "memory" => array(
+    "icon" => "memory",
+    "title" => "internet Memory",
+    "rule" => array (
+      "memoryBot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://internetmemory.org/en/"
   ),
   "mercator" => array(
     "icon" => "robot",
@@ -3360,13 +3443,13 @@ $robot = array(
     ),
     "uri" => "http://www.w3.org/2006/07/mobileok-ddc"
   ),
-  "mojeekbot" => array(
-    "icon" => "robot",
-    "title" => "MojeekBot",
+  "mojeek" => array(
+    "icon" => "mojeek",
+    "title" => "Mojeek",
     "rule" => array(
       "MojeekBot[ /]([0-9.]{1,10})" => "\\1"
     ),
-    "uri" => ""
+    "uri" => "https://www.mojeek.com/bot.html"
   ),
   "momspider" => array(
     "icon" => "robot",
@@ -3566,6 +3649,14 @@ $robot = array(
       "Nessus\)$" => ""
     ),
     "uri" => ""
+  ),
+  "nerdybot" => array(
+    "icon" => "robot",
+    "title" => "NerdyBot",
+    "rule" => array(
+      "NerdyBot" => ""
+    ),
+    "uri" => "http://nerdybot.com/"
   ),
   "nerdbynature" => array(
     "icon" => "nerdbynature",
@@ -3799,12 +3890,13 @@ $robot = array(
     "uri" => ""
   ),
   "obot" => array(
-    "icon" => "obot",
-    "title" => "oBot",
+    "icon" => "ibm",
+    "title" => "IBM (ONLY) Crawler",
     "rule" => array(
-      "^oBot " => ""
+      "oBot[ /]([0-9.]{1,10})" => "\\1"
     ),
-    "uri" => "http://www.onlysolutions.de/"
+    "uri" => "http://filterdb.iss.net/crawler/"
+  	// Previous from "ONLY Solutions GmbH" – that is what the O stands for
   ),
   "ocawa" => array(
     "icon" => "ocawa",
@@ -3935,7 +4027,8 @@ $robot = array(
     "icon" => "orange",
     "title" => "Orange",
     "rule" => array(
-      "OrangeBot-Mobile[ /]([0-9.]{1,10})" => "\\1"
+      "OrangeBot-Mobile[ /]([0-9.]{1,10})" => "\\1",
+      "OrangeBot[ /]([0-9.]{1,10})" => "\\1"
     ),
     "uri" => "http://orange.com/"
   ),
@@ -3964,6 +4057,15 @@ $robot = array(
     ),
     "uri" => ""
   ),
+  "owler" => array(
+    "icon" => "robot",
+    "title" => "Owler",
+    "rule" => array(
+    "Owler[ /]([0-9.]{1,10})" => "\\1",
+    "Owler" => ""
+    ),
+    "uri" => ""
+  ),
   "page2rss" => array(
     "icon" => "page2rss",
     "title" => "Page2RSS",
@@ -3979,6 +4081,14 @@ $robot = array(
       "^PageBitesHyperBot[ /]([0-9.]{1,10})" => "\\1"
     ),
     "uri" => ""
+  ),
+  "pagesinventory" => array(
+    "icon" => "pagesinventory",
+    "title" => "PagesInventory",
+    "rule" => array(
+      "^PagesInventory" => ""
+    ),
+    "uri" => "http://www.pagesinventory.com"
   ),
   "pagesjaunes" => array(
     "icon" => "pagesjaunes",
@@ -4232,6 +4342,14 @@ $robot = array(
       ),
       "uri" => ""
   ),
+  "pubarch" => array(
+    "icon" => "robot",
+    "title" => "PubArchive",
+    "rule" => array(
+      "publiclibraryarchive.org" => ""
+      ),
+      "uri" => ""
+  ),
   "pukiwiki" => array(
     "icon" => "pukiwiki",
     "title" => "PukiWiki",
@@ -4303,6 +4421,14 @@ $robot = array(
       "www\.questfinder\.com" => ""
     ),
     "uri" => ""
+  ),
+  "qwantify" => array(
+    "icon" => "qwantify",
+    "title" => "Qwantify",
+    "rule" => array(
+      "Qwantify[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "https://www.qwant.com/"
   ),
   "qweery" => array(
     "icon" => "robot",
@@ -4391,6 +4517,14 @@ $robot = array(
     ),
     "uri" => ""
   ),
+  "rogerbot" => array(
+    "icon" => "moz",
+    "title" => "Moz Rogerbot",
+    "rule" => array(
+      "rogerbot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://moz.com/help/guides/moz-procedures/who-is-rogerbot"
+  ),
   "rojo" => array(
     "icon" => "rojo",
     "title" => "Rojo",
@@ -4472,6 +4606,14 @@ $robot = array(
     ),
     "uri" => ""
   ),
+  "runet" => array(
+    "icon" => "runet",
+    "title" => "iTrack RuNet Crawler",
+    "rule" => array(
+      "Runet-Research-Crawler" => ""
+    ),
+    "uri" => "http://www.itrack.ru/research/cmsrate/"
+  ),
   "runnk" => array(
     "icon" => "robot",
     "title" => "Runnk",
@@ -4528,6 +4670,14 @@ $robot = array(
       "ScoutJet" => ""
     ),
     "uri" => "http://www.scoutjet.com/"
+  ),
+  "scrapy" => array(
+    "icon" => "scrapy",
+    "title" => "Scrapy",
+    "rule" => array(
+      "Scrapy[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://scrapy.org"
   ),
   "scrubby" => array(
     "icon" => "scrubby",
@@ -4632,6 +4782,14 @@ $robot = array(
       "semanticdiscovery[ /]([0-9.]{1,10})" => "\\1"
     ),
     "uri" => ""
+  ),
+  "semrush" => array(
+    "icon" => "semrush",
+    "title" => "SEMrush",
+    "rule" => array(
+      "SemrushBot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.semrush.com/bot.html"
   ),
   "sengine" => array(
     "icon" => "sengine",
@@ -4804,6 +4962,14 @@ $robot = array(
     ),
     "uri" => "http://www.sitebot.org/robot/"
   ),
+  "siteexplorer" => array(
+	"icon" => "siteexplorer",
+	"title" => "SiteExplorer",
+	"rule" => array(
+	  "SiteExplorer[ /]([0-9a-z.]{1,10})" => "\\1"
+	),
+	"uri" => "http://siteexplorer.info/"
+  ),
   "sitesell" => array(
     "icon" => "sitesell",
     "title" => "SiteSell",
@@ -4835,6 +5001,14 @@ $robot = array(
       "SitiDiBot[ /]([0-9.]{1,10})" => "\\1"
     ),
     "uri" => ""
+  ),
+  "sixy" => array(
+    "icon" => "robot",
+    "title" => "Sixy.ch",
+    "rule" => array(
+      "sixy.ch[ /]([0-9a-z.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://sixy.ch"
   ),
   "skaffe" => array(
     "icon" => "robot",
@@ -5452,6 +5626,14 @@ $robot = array(
       "Twingly Recon" => ""
     ),
     "uri" => "http://www.twingly.com/"
+  ),
+  "twitter" => array(
+    "icon" => "twitter",
+    "title" => "Twitter",
+    "rule" => array(
+      "Twitterbot[ /-]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "https://dev.twitter.com/cards/getting-started#crawling"
   ),
   "typepad" => array(
     "icon" => "typepad",
@@ -6129,7 +6311,8 @@ $robot = array(
     "icon" => "wget",
     "title" => "Wget",
     "rule" => array(
-      "Wget[ /]([0-9.]{1,10})" => "\\1"
+      "Wget[ /]([0-9.]{1,10})" => "\\1",
+      "Wget" => ""
     ),
     "uri" => ""
   ),
@@ -6432,6 +6615,14 @@ $robot = array(
     ),
     "uri" => ""
   ),
+  "xovi" => array(
+    "icon" => "xovi",
+    "title" => "Xovi",
+    "rule" => array(
+      "XoviBot[ /]([0-9a-z.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.xovibot.net"
+  ),
   "yacy" => array(
     "icon" => "yacy",
     "title" => "Yacy",
@@ -6652,6 +6843,14 @@ $robot = array(
       "zspider[ /]([0-9.a-z]{1,10})" => "\\1"
     ),
     "uri" => "http://feedback.redkolibri.com/"
+  ),
+  "zumbot" => array(
+    "icon" => "robot",
+    "title" => "ZUM Search",
+    "rule" => array(
+      "ZumBot[ /]([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://help.zum.com/inquiry"
   ),
   "zyborg" => array(
     "icon" => "zyborg",

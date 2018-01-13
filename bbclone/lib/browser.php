@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: browser.php 244 2014-02-07 22:22:06Z joku $
+ * SVN FILE $Id: browser.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -453,6 +453,14 @@ $browser = array(
     ),
     "uri" => "http://www.eklhad.net/linux/app/"
   ),
+  "edge" => array(
+    "icon" => "edge",
+    "title" => "Edge",
+    "rule" => array(
+      "Edge/([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => "http://www.microsoft.com/"
+  ),
   "elinks" => array(
     "icon" => "links",
     "title" => "ELinks",
@@ -639,6 +647,14 @@ $browser = array(
     ),
     "uri" => "http://www.geticeweasel.org/"
   ),
+  "iemobile"  => array(
+    "icon"  => "iemobile",
+    "title" => "IE Mobile",
+    "rule"  => array(
+      "IEMobile/([0-9.]{1,10})" => "\\1"
+    ),
+    "uri" => ""
+  ),
   "iexplorepocket" => array(
     "icon" => "mobile",
     "title" => "Internet Explorer Pocket",
@@ -789,7 +805,7 @@ $browser = array(
     "icon" => "lynx",
     "title" => "Lynx",
     "rule" => array(
-      "lynx/([0-9a-z.]{1,10})" => "\\1"
+      "lynx[ /]([0-9a-z.]{1,10})" => "\\1"
     ),
     "uri" => "http://lynx.browser.org/"
   ),

@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: lt.php 241 2014-02-06 18:39:59Z joku $
+ * SVN FILE $Id: lt.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -54,6 +54,8 @@ $extensions = array(
 "tel" => "Kontaktai",
 "xxx" => "erotika",
 
+"a1" => "Anoniminis Proxy",
+"a2" => "Palydovinė Teikėjas",
 "ac" => "Prisikėlimo Sala",
 "ad" => "Andora",
 "ae" => "Jungtiniai arabų emiratai",
@@ -64,6 +66,7 @@ $extensions = array(
 "am" => "Armenija",
 "an" => "Skandinavų Antilai",
 "ao" => "Angola",
+"ap" => "Azijos ir Ramiojo vandenyno",
 "aq" => "Antarktika",
 "ar" => "Argentina",
 "as" => "Amerikos Samoa",
@@ -649,7 +652,25 @@ Examples:<br />
 "Include BBClone hits within the Stats<br />
 Examples:<br />
 \$BBC_HITS =1;<br />
-\$BBC_HITS =&quot;&quot;;"
+\$BBC_HITS =&quot;&quot;;",
+
+"config_BBC_USE_ORIGINAL_URI" =>
+"Enable this option when the &quot;Top Visited Pages&quot; URI's are not working due
+filtering of the URI. This can happen if you use BBClone with some Content
+Management Systems (CMS) which are using very long (complex) URI naming.<br />
+IMPORTED NOTE: This option changes how URI's are recorded,
+so you may need to reset the stats.<br />
+Examples:<br />
+\$BBC_USE_ORIGINAL_URI = 1;	=> No filtering, use original URI<br />
+\$BBC_USE_ORIGINAL_URI = &quot;&quot;;	=> Filter URI (default)",
+
+"config_BBC_MAX_PAGENAME" =>
+"The max. number of characters for the page name.<br />
+Longer page names will be stript down at the front, leading with &quot;...&quot;<br />
+IMPORTED NOTE: This option changes how page names are recorded,
+so you may need to reset the stats.<br />
+Examples:<br />
+\$BBC_MAX_PAGENAME = 60;	=> 60 characters (default)"
 
 );
 ?>
