@@ -149,6 +149,7 @@
 						<li><a href="#installation-other">CMSimple 3.3 and CMSimple LE</a></li>
 					</ol>
 				</li>
+                <li><a href="#access">Access Control for BBClone</a></li>
 				<li>
 					<a href="#configuration">Configuration</a>
 					<ol>
@@ -178,7 +179,7 @@
 				
 				<h2><a name="version">Version</a><a class="toplink" href="#">Back to top</a></h2>
 				
-					<p>This is currently version 1.0.1 of the plugin, released 3th November 2018.</p>
+					<p>This is currently version 1.0.2 of the plugin, released Februrary 16th 2018.</p>
 								
 				<h2><a name="requirements">Requirements</a><a class="toplink" href="#">Back to top</a></h2>
 					
@@ -238,6 +239,29 @@ $cf['plugins']['folder'] = "plugins";
                             <li>Copy the plugin files into the created folder.</li>
 						</ul>
 				
+                <h2><a name="access">Access Control for BBClone</a><a class="toplink" href="#">Back to top</a></h2>
+                        
+                    <p>BBClone does not offer access control; this means, given the link, everybody can view the statistics and the configuration. To prevent this, the easiest solution is to setup a <code>.htaccess</code> file.</p>
+
+                    <p>The <code>.htaccess</code> file might look as follows:</p>
+                
+<pre>
+AuthType Basic
+AuthName "BBClone"
+AuthUserFile /opt/lampp/htdocs/.htpasswd
+Require valid-user
+</pre>
+
+                    <p>The corresponding <code>.htpasswd</code> file might look like:</p>
+                
+<pre>
+david:$apr1$9ecnbHA9$M.Qg.7PC3UZwDT5NUHv1K/
+</pre>
+                
+                    <p>Which corresponds to a user "david" with password "test". User/password generators can be found online, for example <a href="http://www.htaccesstools.com/htpasswd-generator/" target="_blank">this one</a>.</p>
+
+                    <p>Also note that the path to the <code>.htpasswd</code> file varies across providers and setups.</p>
+                
 				<h2><a name="configuration">Configuration</a><a class="toplink" href="#">Back to top</a></h2>
 				
 					<h3><a name="configuration-options">Configuration options</a><a class="toplink" href="#">Back to top</a></h3>
@@ -270,9 +294,7 @@ $cf['plugins']['folder'] = "plugins";
 				<h2><a name="usage">Usage</a><a class="toplink" href="#">Back to top</a></h2>
 				
                     <p>Simply go to "Plugins" > "BBClone" and select "Statistics". Using the "Go to statistics" button you can view BBClone's backend including all provided statistics.</p>
-                
-                    <p class="notice"><b>Before going live with the CMSImple system, go to the <code>bbclone</code> folder within CMSimple's root and replace the <code>var</code> folder with the folder contained in <code>var.zip</code>.</b></p>
-                    
+                                    
 				<h2><a name="changelog">Changelog</a><a class="toplink" href="#">Back to top</a></h2>
 				
 				<h2><a name="license">License</a><a class="toplink" href="#">Back to top</a></h2>

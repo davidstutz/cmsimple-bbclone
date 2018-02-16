@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: config.php 234 2014-01-18 11:12:30Z matthys $
+ * SVN FILE $Id: config.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -146,7 +146,7 @@ $BBC_NO_DNS = "";
 // $BBC_EXT_LOOKUP = "GEOIP";  	  => Use GeoIP API plug-in
 // $BBC_EXT_LOOKUP = "GEOIP-mod"; => Use GeoIP PHP/Perl Module (geoip.so)
 // (See http://www.maxmind.com for more details)
-$BBC_GEOIP_PATH = "bbclone/geoip/";
+$BBC_GEOIP_PATH = "geoip/";
 $BBC_EXT_LOOKUP = "";
 
 // BBClone's default is to show hits in the time stats, because it gives a quite useful impression
@@ -182,7 +182,7 @@ $BBC_IGNORE_IP = "";
 $BBC_IGNORE_REFER = "";
 
 // Include BBClone hits within the Stats
-// Example:
+// Syntax:
 // $BBC_HITS = 1;     => Include BBClone hits (Default)
 // $BBC_HITS = "";    => Ignore BBClone hits
 $BBC_HITS = 1;
@@ -203,7 +203,7 @@ $BBC_DEBUG = "";
 // In case there's no translation for your language or you want to use a
 // particular character set, you can overwrite the language used for converting
 // keywords by setting your desired encoding here.
-// Example:
+// Syntax:
 // $BBC_CUSTOM_CHARSET = "UTF-8";  => Use UTF-8 as encoding
 // $BBC_CUSTOM_CHARSET = "";       => Use the default charset of the translation
 $BBC_CUSTOM_CHARSET = "";
@@ -214,13 +214,14 @@ $BBC_CUSTOM_CHARSET = "";
 $BBC_CSS_FILE = "bbclone.css";
 
 // Generate the page load-time in seconds at bottom of the page
+// Syntax:
 // $BBC_LOADTIME = "";       => No load-time generated (Default)
 // $BBC_LOADTIME = 1;        => Generate load-time at bottom of the page
 $BBC_LOADTIME = "";
 
 // With this option you can enable whois search in Detailed Stats
 //
-// Please read the terms of use and privacy policy of the provider before using this !
+// Please read the terms of use and privacy policy of the provider before using this!
 //
 // By default comment out and disabled, remove // to enable
 // Syntax:
@@ -248,6 +249,24 @@ $BBC_IGNORE_BOTS = 1;
 // $BBC_IGNORE_AGENT = "";    => Treat each user agent change of one visitor as
 //                               separate visit (default)
 $BBC_IGNORE_AGENT = "";
+
+// Enable this option when the "Top Visited Pages" URI's are not working due
+// filtering of the URI. This can happen if you use BBClone with some Content
+// Management Systems (CMS) which are using very long (complex) URI naming.
+// IMPORTED NOTE: This option changes how URI's are recorded,
+//                so you may need to reset the stats.
+// Syntax:
+// $BBC_USE_ORIGINAL_URI = 1;	=> No filtering, use original URI
+// $BBC_USE_ORIGINAL_URI = "";	=> Filter URI (default)
+$BBC_USE_ORIGINAL_URI = "";
+
+// The max. number of characters for the page name.
+// Longer page names will be stripped-down at the front, leading with "..."
+// IMPORTED NOTE: This option changes how page names are recorded,
+//                so you may need to reset the stats.
+// Syntax:
+// $BBC_MAX_PAGENAME = 60;	=> 60 characters (default)
+$BBC_MAX_PAGENAME = 60;
 
 //
 ?>

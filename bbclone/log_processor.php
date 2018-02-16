@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: log_processor.php 201 2014-01-07 12:40:32Z matthys $
+ * SVN FILE $Id: log_processor.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -126,19 +126,18 @@ function bbc_update_visits($time, $page, $nr) {
 
 // The most visited pages ranking
 function bbc_update_page_stats($connect) {
-  global $access, $last;
+  global $BBC_MAX_PAGENAME, $access, $last;
 
   $long_page = $connect['page'];
-  $over_60 = (strlen($long_page) > 60) ? 1 : 0;
-  $connect['page'] = $over_60 ? "...".substr($long_page, -57) : $long_page;
+  $oversized_pagename = (strlen($long_page) > $BBC_MAX_PAGENAME) ? 1 : 0;
+  $connect['page'] = $oversized_pagename ? "...".substr($long_page, -($BBC_MAX_PAGENAME-3)) : $long_page;
 
   // Fix oversized page titles
-  if (($over_60) && (isset($access['page'][$long_page]['count']))) {
+  if (($oversized_pagename) && (isset($access['page'][$long_page]['count']))) {
     $access['page'][($connect['page'])]['count'] = $access['page'][$long_page]['count'];
     $access['page'][($connect['page'])]['uri'] = $access['page'][$long_page]['uri'];
     unset($access['page'][$long_page]);
   }
-
 
   if (!isset($access['page'][($connect['page'])]['count'])) {
     $access['page'][($connect['page'])]['count'] = 0;
@@ -149,7 +148,7 @@ function bbc_update_page_stats($connect) {
 
   $last['pages'] = ((empty($last['pages'])) || (!is_array($last['pages']))) ? array() : $last['pages'];
 
-  if (($over_60) && (in_array($long_page, $last['pages']))) {
+  if (($oversized_pagename) && (in_array($long_page, $last['pages']))) {
     $last['pages'][bbc_get_key($last['pages'], $long_page)] = $connect['page'];
   }
   if (!in_array($connect['page'], $last['pages'])) $last['pages'][] = $connect['page'];

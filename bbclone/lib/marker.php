@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: marker.php 63 2013-12-05 15:19:31Z joku $
+ * SVN FILE $Id: marker.php 356 2015-12-11 10:49:19Z joku $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -217,7 +217,13 @@ class bbc_marker {
 
   // avoid trails of query strings which aren't relevant for page counting
   function bbc_filter_uri($script, $pinfo, $uri) {
-    // getting rid of stupid user input
+  	global $BBC_USE_ORIGINAL_URI;
+  	
+  	// check if we should use original uri, else we filter uri by default
+  	if ((!empty($BBC_USE_ORIGINAL_URI))) {
+  		return $uri;
+  	}
+    // filter -> getting rid of stupid user input
     foreach (array("pinfo", "uri") as $path) {
       ${$path} = str_replace(":/", "://", preg_replace(":/+:", "/", ${$path}));
       ${$path} = preg_replace(":\.+(/|$):", "\\1", ${$path});

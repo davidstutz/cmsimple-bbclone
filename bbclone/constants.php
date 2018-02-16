@@ -1,9 +1,9 @@
 <?php
 /* This file is part of BBClone (A PHP based Web Counter on Steroids)
  * 
- * SVN FILE $Id: constants.php 252 2014-02-22 10:28:54Z matthys $
+ * SVN FILE $Id: constants.php 362 2015-12-23 18:39:12Z matthys $
  *  
- * Copyright (C) 2001-2014, the BBClone Team (see doc/authors.txt for details)
+ * Copyright (C) 2001-2016, the BBClone Team (see doc/authors.txt for details)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,7 +28,7 @@ global $BBC_ROOT_PATH, $BBC_VERSION, $BBC_CACHE_PATH, $BBC_CONF_PATH,
 // BBClone's location relative from where it's been called
 $BBC_ROOT_PATH = defined("_BBCLONE_DIR") ? _BBCLONE_DIR : "";
 // BBClone version
-$BBC_VERSION = "0.6.2";
+$BBC_VERSION = "0.6.4";
 // Directory paths
 $BBC_CACHE_PATH  = $BBC_ROOT_PATH."var/";
 $BBC_CONF_PATH = $BBC_ROOT_PATH."conf/";

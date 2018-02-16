@@ -18,7 +18,7 @@ Other CMSimple plugins:
 2. In your `plugins` folder create a new folder called `bbclone`.
 3. Copy the downloaded files into the created folder.
 
-**Before going live with the CMSimple system, go to the `bbclone` folder within CMSimple's root and replace the `var` folder with the folder contained in `var.zip`.**
+**Also consider setting up a `.htaccess` file to control access to the `/bbclone` subdirectory!**
 
 ## Requirements & Compatibility
 
