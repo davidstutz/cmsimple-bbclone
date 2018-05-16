@@ -135,7 +135,19 @@ class BBClone {
 	{
 		return '<a href="https://github.com/davidstutz/cmsimple-bbclone" target="_blank">GitHub Repository</a>';
 	}
-    
+	
+	/**
+	 * @public
+	 * @static
+	 * Donate link.
+	 * 
+	 * @return <string> donate string
+	 */
+	public static function donate()
+	{
+		return '<b>Consider <a href="http://davidstutz.de/donate/">donating</a>.</b>';
+	}
+
 	/**
 	 * @static
 	 * @public

@@ -6,6 +6,8 @@ Documentation: [http://davidstutz.de/cmsimplexhdemo/plugins/bbclone/help/help_en
 
 Project webpage: [http://davidstutz.de/projects/cmsimple-plugins/](http://davidstutz.de/projects/cmsimple-plugins/)
 
+Also consider [donating](http://davidstutz.de/donate/) to support this plugin.
+
 Other CMSimple plugins:
 
 * [CMSimple News](https://github.com/davidstutz/cmsimple-news): allows to publish and manage news - can also be used to provide blog-like functionality.

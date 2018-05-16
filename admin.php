@@ -53,7 +53,8 @@ if ((function_exists('XH_wantsPluginAdministration') AND XH_wantsPluginAdministr
 				. 'Released: ' . BBClone::release_date() . '<br />'
 				. 'Author: ' . BBClone::author() . '<br />'
 				. 'Website: ' . BBClone::website() . '<br />'
-                . 'GitHub Repository: ' . BBCLone::github() . '<br />'
+				. 'GitHub Repository: ' . BBCLone::github() . '<br />'
+				. BBClone::donate() . '<br />'
 				. BBClone::description() . '<br />'
 				. BBClone::legal() . '<br />'
 				. '</div>';
