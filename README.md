@@ -2,7 +2,9 @@
 
 CMSimple BBClone is a CMSimple plugin to use [BBClone](http://bbclone.de/) as web counter.
 
-Documentation: [http://davidstutz.de/cmsimplexhdemo/plugins/bbclone/help/help_en.htm](http://davidstutz.de/cmsimplexhdemo/plugins/bbclone/help/help_en.htm).
+**This plugin is not actively maintained anymore. If you are working with CMSimple and interested in maintaining it, please contact me (see GitHub profile for contact information).**
+
+Documentation included in the plugin.
 
 Project webpage: [http://davidstutz.de/projects/cmsimple-plugins/](http://davidstutz.de/projects/cmsimple-plugins/)
 
